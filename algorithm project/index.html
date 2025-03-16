@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function analyzeSentence() {
+    let sentence = "";
+    let char;
+    
+    console.log("Enter a sentence ending with a period ('.'):");
+
+    while (true) {
+        char = prompt("Enter a character:"); 
+        sentence += char;
+        
+        if (char === ".") {
+            break; 
+        }
+    }
+
+    let sentenceWithoutPeriod = sentence.slice(0, -1);
+
+    let charCount = sentenceWithoutPeriod.length;
+
+    let wordCount = sentenceWithoutPeriod.trim().split(/\s+/).length;
+
+    let vowels = "aeiouAEIOU";
+    let vowelCount = [...sentenceWithoutPeriod].filter(c => vowels.includes(c)).length;
+
+   
+}
+
+analyzeSentence();
+
+
+    </script>
+</body>
+</html>
